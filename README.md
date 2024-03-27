@@ -173,6 +173,8 @@ These transactions are crucial for the Task 2 implementation since they contain 
 
 This outlines the methodology used to adapt the estimated output amount for withdrawals in the Superform protocol, taking into consideration the processing time delays and their impact on the final output amount. The approach utilizes two key formulas: the Time Adjustment Factor (TAF) and the Adapted Output Amount (AAO).
 
+`NOTE`: the formula can be further extended to include fees, gas costs, and other factors that may impact the final output amount.
+
 ## Time Adjustment Factor (TAF)
 
 The Time Adjustment Factor (TAF) is a metric that reflects the average percentage change in transaction output amounts relative to the initial output amount, weighted by the processing time for each transaction. This factor helps in understanding how processing delays can affect the final output amounts.
