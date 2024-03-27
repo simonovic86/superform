@@ -1,0 +1,317 @@
+[
+  {
+    "inputs": [
+      {
+        "internalType": "address",
+        "name": "superRegistry_",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "nonpayable",
+    "type": "constructor"
+  },
+  {
+    "inputs": [],
+    "name": "INVALID_PAYLOAD",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "INVALID_PAYLOAD_ID",
+    "type": "error"
+  },
+  {
+    "inputs": [],
+    "name": "ZERO_ADDRESS",
+    "type": "error"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "dstPayloadId_",
+        "type": "uint256"
+      }
+    ],
+    "name": "decodeCoreStateRegistryPayload",
+    "outputs": [
+      {
+        "components": [
+          {
+            "internalType": "uint8",
+            "name": "txType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "uint8",
+            "name": "callbackType",
+            "type": "uint8"
+          },
+          {
+            "internalType": "address",
+            "name": "srcSender",
+            "type": "address"
+          },
+          {
+            "internalType": "uint64",
+            "name": "srcChainId",
+            "type": "uint64"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "amounts",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "outputAmounts",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "slippages",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "uint256[]",
+            "name": "superformIds",
+            "type": "uint256[]"
+          },
+          {
+            "internalType": "bool[]",
+            "name": "hasDstSwaps",
+            "type": "bool[]"
+          },
+          {
+            "internalType": "address",
+            "name": "receiverAddress",
+            "type": "address"
+          },
+          {
+            "internalType": "uint256",
+            "name": "srcPayloadId",
+            "type": "uint256"
+          },
+          {
+            "internalType": "bytes",
+            "name": "extraFormData",
+            "type": "bytes"
+          },
+          {
+            "internalType": "uint8",
+            "name": "multi",
+            "type": "uint8"
+          }
+        ],
+        "internalType": "struct IPayloadHelper.DecodedDstPayload",
+        "name": "v",
+        "type": "tuple"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "dstPayloadId_",
+        "type": "uint256"
+      }
+    ],
+    "name": "decodeCoreStateRegistryPayloadLiqData",
+    "outputs": [
+      {
+        "internalType": "bytes[]",
+        "name": "txDatas",
+        "type": "bytes[]"
+      },
+      {
+        "internalType": "address[]",
+        "name": "tokens",
+        "type": "address[]"
+      },
+      {
+        "internalType": "address[]",
+        "name": "interimTokens",
+        "type": "address[]"
+      },
+      {
+        "internalType": "uint8[]",
+        "name": "bridgeIds",
+        "type": "uint8[]"
+      },
+      {
+        "internalType": "uint64[]",
+        "name": "liqDstChainIds",
+        "type": "uint64[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "amountsIn",
+        "type": "uint256[]"
+      },
+      {
+        "internalType": "uint256[]",
+        "name": "nativeAmounts",
+        "type": "uint256[]"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "srcPayloadId_",
+        "type": "uint256"
+      }
+    ],
+    "name": "decodePayloadHistory",
+    "outputs": [
+      {
+        "internalType": "uint8",
+        "name": "txType",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint8",
+        "name": "callbackType",
+        "type": "uint8"
+      },
+      {
+        "internalType": "uint8",
+        "name": "multi",
+        "type": "uint8"
+      },
+      {
+        "internalType": "address",
+        "name": "srcSender",
+        "type": "address"
+      },
+      {
+        "internalType": "address",
+        "name": "receiverAddressSP",
+        "type": "address"
+      },
+      {
+        "internalType": "uint64",
+        "name": "srcChainId",
+        "type": "uint64"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "payloadId_",
+        "type": "uint256"
+      }
+    ],
+    "name": "decodeTimeLockFailedPayload",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "srcSender",
+        "type": "address"
+      },
+      {
+        "internalType": "uint64",
+        "name": "srcChainId",
+        "type": "uint64"
+      },
+      {
+        "internalType": "uint256",
+        "name": "srcPayloadId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "superformId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "timelockPayloadId_",
+        "type": "uint256"
+      }
+    ],
+    "name": "decodeTimeLockPayload",
+    "outputs": [
+      {
+        "internalType": "address",
+        "name": "receiverAddress",
+        "type": "address"
+      },
+      {
+        "internalType": "uint64",
+        "name": "srcChainId",
+        "type": "uint64"
+      },
+      {
+        "internalType": "uint256",
+        "name": "srcPayloadId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "superformId",
+        "type": "uint256"
+      },
+      {
+        "internalType": "uint256",
+        "name": "amount",
+        "type": "uint256"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [
+      {
+        "internalType": "uint256",
+        "name": "dstPayloadId_",
+        "type": "uint256"
+      }
+    ],
+    "name": "getDstPayloadProof",
+    "outputs": [
+      {
+        "internalType": "bytes32",
+        "name": "",
+        "type": "bytes32"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  },
+  {
+    "inputs": [],
+    "name": "superRegistry",
+    "outputs": [
+      {
+        "internalType": "contract ISuperRegistry",
+        "name": "",
+        "type": "address"
+      }
+    ],
+    "stateMutability": "view",
+    "type": "function"
+  }
+]
